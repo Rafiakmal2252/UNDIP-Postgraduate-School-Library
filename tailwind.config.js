@@ -13,7 +13,8 @@ export default {
     theme: {
         extend: {
             fontFamily: {
-                sans: ['Figtree', ...defaultTheme.fontFamily.sans],
+                poppins: ['Poppins', 'sans-serif'],
+                sans: ['Plus Jakarta Sans', ...defaultTheme.fontFamily.sans],
             },
             colors: {
                 isi: '#47663B',
@@ -22,6 +23,15 @@ export default {
                 link: '#2EA3F2',
                 footer: '#0A0F29',
             },
+            keyframes: {
+                slideInFromLeft: {
+                  '0%': { transform: 'translateX(-100%)', opacity: '0' },
+                  '100%': { transform: 'translateX(0)', opacity: '1' },
+                },
+              },
+              animation: {
+                slideInFromLeft: 'slideInFromLeft 1s ease-out',
+              },
         },
     },
     plugins: [
